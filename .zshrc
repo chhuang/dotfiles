@@ -6,8 +6,14 @@ source ~/.alias
 antigen use oh-my-zsh
 
 # Load the theme.
-antigen theme chhuang/dotfiles chh
+# antigen theme chhuang/dotfiles chh
+antigen theme ~/.dotfiles --loc=chh --no-local-clone
+
+# Bundles
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle git
+antigen bundle bundler
+antigen bundle z
 
 # Tell antigen that you're done.
 antigen apply
@@ -24,10 +30,8 @@ antigen apply
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-
 MYSQL=/usr/local/mysql/bin
 export PATH=$PATH:$MYSQL
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-
 
 unsetopt share_history
