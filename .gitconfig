@@ -1,0 +1,48 @@
+[user]
+	email = hola@chh.io
+	name = Chang Huang
+[push]
+	default = simple
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = subl -n -w
+	pager = diff-highlight | diff-so-fancy | less -r
+[color]
+  ui = always
+[color "status"]
+  added = green
+  changed = red
+  untracked = cyan
+[color "branch"]
+  current = green
+  local = cyan
+  remote = magenta
+[color "diff"]
+  meta = cyan
+  commit = yellow
+  frag = cyan
+  old = red
+  new = green
+  whitespace = red reverse
+[color "diff-highlight"]
+  oldNormal = red
+  oldHighlight = "red bold 52"
+  newNormal = green
+  newHighlight = "green bold 22"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope

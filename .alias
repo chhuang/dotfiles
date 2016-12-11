@@ -1,9 +1,10 @@
-alias 1t='/Users/chh/Dropbox/2_projects/1_canchas-1t/1_web/v3'
+alias 1t='/Users/chh/Dropbox/2-projects/1_canchas-1t/1_web/v3'
 alias oneflare='/Users/chh/Work/oneflare/Site'
 alias oneflared='/Users/chh/Work/oneflare/oneflare-directory'
 alias oneflarew='/Users/chh/Work/oneflare/oneflare-job-widget'
 alias npmlg="npm list -g --depth=0"
 alias npml="npm list --depth=0"
+alias tcp="lsof -P | grep TCP | grep"
 
 alias rs='rails s -b 0.0.0.0'
 alias css='stylestats' 
