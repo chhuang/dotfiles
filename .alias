@@ -9,3 +9,5 @@ alias tcp="lsof -P | grep TCP | grep"
 alias rs='rails s -b 0.0.0.0'
 alias css='stylestats' 
 
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+

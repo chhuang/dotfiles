@@ -1,5 +1,5 @@
-
-source /Users/chh/.antigen/antigen.zsh
+#source /Users/chh/.antigen/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
 source ~/.alias
 
 # Load the oh-my-zsh's library.
