@@ -1,39 +1,40 @@
-#source /Users/chh/.antigen/antigen.zsh
-source /usr/local/share/antigen/antigen.zsh
-source ~/.alias
+# Source antigen
+source $(brew --prefix)/share/antigen/antigen.zsh
+source $HOME/.alias
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
-# Load the theme.
-# antigen theme chhuang/dotfiles chh
-antigen theme ~/.dotfiles --loc=chh --no-local-clone
-
 # Bundles
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle git
-antigen bundle bundler
 antigen bundle z
 
 # Tell antigen that you're done.
 antigen apply
 
-# OMZ
-# source /Users/chh/.oh-my-zsh
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# ZSH_THEME="chh"
-
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-MYSQL=/usr/local/mysql/bin
-export PATH=$PATH:$MYSQL
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-
+# https://github.com/robbyrussell/oh-my-zsh/issues/2537
 unsetopt share_history
-export NVM_DIR="/Users/chh/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Colours
+# https://gabri.me/blog/custom-colors-in-your-zsh-prompt
+#
+# Git info
+# https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh
+
+# PS1='$FG[099]%m $FG[118]%(!.#.#)%{$reset_color%} '
+PS1='$FG[049]%(!.#.#) '
+RPS1='%{$reset_color%} $FG[069]%~$(git_prompt_info)$FG[001]$(git_commits_behind)$FG[002]$(git_commits_ahead)'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="$FG[177] :"
+ZSH_THEME_GIT_PROMPT_CLEAN=" 😎 "
+ZSH_THEME_GIT_PROMPT_DIRTY=" 💀 "
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+
+ZSH_THEME_GIT_COMMITS_BEHIND_PREFIX=" [-"
+ZSH_THEME_GIT_COMMITS_BEHIND_SUFFIX="]"
+ZSH_THEME_GIT_COMMITS_AHEAD_PREFIX=" [+"
+ZSH_THEME_GIT_COMMITS_AHEAD_SUFFIX="]"
