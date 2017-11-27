@@ -1,6 +1,6 @@
 # Source antigen
 source $(brew --prefix)/share/antigen/antigen.zsh
-source $HOME/.alias
+source $HOME/.dotfiles/.alias
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
