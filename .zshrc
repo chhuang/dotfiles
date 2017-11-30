@@ -6,12 +6,16 @@ source $HOME/.dotfiles/.alias
 antigen use oh-my-zsh
 
 # Bundles
-antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle git
 antigen bundle z
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 
 # Tell antigen that you're done.
 antigen apply
+
+# External plugins
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
