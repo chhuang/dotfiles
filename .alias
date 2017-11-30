@@ -1,7 +1,7 @@
 # Shortcuts
-alias institchu='/Users/chh/Dropbox/2-projects/2017-institchu/1-code/1-institchu.com'
-alias institchuapi='/Users/chh/Dropbox/2-projects/2017-institchu/1-code/2-api.institchu.com'
-alias snowpak='/Users/chh/Dropbox/2-projects/2017-snowpak/1-code'
+alias institchu='/Users/chh/GitHub/institchu.com'
+alias institchuapi='/Users/chh/GitHub/api.institchu.com'
+alias snowpak='/Users/chh/GitHub/snowpak'
 
 # NPM list (only top level)
 alias npml="npm list --depth=0"
